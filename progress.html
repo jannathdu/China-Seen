@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover China, explore destinations, and track your travel journey with China Seen.">
+
+  <title>China Seen | 看见中国</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/progress.css">
+
+
+<script src="js/app.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/progress-i18n.js" defer></script>
+<script src="js/progress.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a href="index.html" class="brand" aria-label="China Seen Home">
+        <span class="brand-icon">中</span>
+        <span>China Seen <small>看见中国</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+        aria-label="Toggle navigation"
+        aria-controls="nav-menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        
+<a href="index.html" data-i18n="home">Home</a>
+
+        <a href="explore.html" data-i18n="explore">Explore</a>
+        <a href="discover.html" data-i18n="discover">Discover</a>
+        <a href="journey.html" data-i18n="journey">My Journey</a>
+        
+<a href="progress.html" class="active" aria-current="page" data-i18n="progress">Progress</a>
+
+      </div>
+
+      <div class="language-switcher">
+        <label for="language-select" class="sr-only">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="bn">বাংলা</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  
+<main id="main-content">
+
+  <!-- Progress Hero -->
+  <section class="progress-hero">
+    <div class="container">
+      <span class="eyebrow" data-progress-i18n="eyebrow">
+        YOUR EXPLORATION AT A GLANCE
+      </span>
+
+      <h1 data-progress-i18n="title">Travel Progress</h1>
+
+      <p data-progress-i18n="subtitle">
+        See how far you have traveled across China
+        and celebrate every new destination.
+      </p>
+    </div>
+  </section>
+
+  <!-- Progress Dashboard -->
+  <section class="progress-section">
+    <div class="container">
+
+      <!-- Statistics -->
+      <div class="progress-stats">
+
+        <article class="progress-stat-card">
+          <span data-progress-i18n="visited">Visited Regions</span>
+          <strong id="progress-visited-count">0</strong>
+        </article>
+
+        <article class="progress-stat-card">
+          <span data-progress-i18n="wishlist">Wishlist</span>
+          <strong id="progress-wishlist-count">0</strong>
+        </article>
+
+        <article class="progress-stat-card">
+          <span data-progress-i18n="remaining">Remaining Regions</span>
+          <strong id="progress-remaining-count">34</strong>
+        </article>
+
+      </div>
+
+      <!-- Overall Progress -->
+      <section class="progress-overview" aria-labelledby="progress-overview-heading">
+
+        <div class="progress-section-heading">
+          <h2 id="progress-overview-heading" data-progress-i18n="overall">
+            Overall Exploration
+          </h2>
+        </div>
+
+        <div class="progress-overview-content">
+
+          <div
+            id="progress-circle"
+            class="progress-circle"
+            role="progressbar"
+            aria-label="Overall travel progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div class="progress-circle-inner">
+              <strong id="progress-percent">0%</strong>
+              <span data-progress-i18n="completed">Completed</span>
+            </div>
+          </div>
+
+          <div class="progress-overview-details">
+            <h3 id="progress-summary">
+              0 of 34 regions explored
+            </h3>
+
+            <p id="progress-remaining-text">
+              34 regions remaining
+            </p>
+
+            <a href="explore.html" class="btn btn-primary" data-progress-i18n="exploreMore">
+              Explore More →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Region Type Breakdown -->
+      <section class="progress-breakdown" aria-labelledby="progress-breakdown-heading">
+
+        <div class="progress-section-heading">
+          <h2 id="progress-breakdown-heading" data-progress-i18n="breakdown">
+            Region Type Breakdown
+          </h2>
+
+          <p data-progress-i18n="breakdownSubtitle">
+            Your visits across different administrative regions.
+          </p>
+        </div>
+
+        <div id="progress-type-list" class="progress-type-list">
+          <!-- Rendered by progress.js -->
+        </div>
+
+      </section>
+
+      <!-- Milestones -->
+      <section class="progress-milestones" aria-labelledby="progress-milestones-heading">
+
+        <div class="progress-section-heading">
+          <h2 id="progress-milestones-heading" data-progress-i18n="milestones">
+            Travel Milestones
+          </h2>
+
+          <p data-progress-i18n="milestonesSubtitle">
+            Celebrate your progress as you explore more of China.
+          </p>
+        </div>
+
+        <div class="progress-milestone-grid">
+
+          <article class="progress-milestone-card" data-milestone="25">
+            <span class="milestone-icon" aria-hidden="true">★</span>
+            <h3 data-progress-i18n="milestone25">Explorer</h3>
+            <p>25%</p>
+            <span class="milestone-status">Locked</span>
+          </article>
+
+          <article class="progress-milestone-card" data-milestone="50">
+            <span class="milestone-icon" aria-hidden="true">★</span>
+            <h3 data-progress-i18n="milestone50">Adventurer</h3>
+            <p>50%</p>
+            <span class="milestone-status">Locked</span>
+          </article>
+
+          <article class="progress-milestone-card" data-milestone="75">
+            <span class="milestone-icon" aria-hidden="true">★</span>
+            <h3 data-progress-i18n="milestone75">Trailblazer</h3>
+            <p>75%</p>
+            <span class="milestone-status">Locked</span>
+          </article>
+
+          <article class="progress-milestone-card" data-milestone="100">
+            <span class="milestone-icon" aria-hidden="true">★</span>
+            <h3 data-progress-i18n="milestone100">China Master</h3>
+            <p>100%</p>
+            <span class="milestone-status">Locked</span>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>China Seen · 看见中国</strong>
+        <p data-i18n="footerTagline">How much of China have you seen?</p>
+      </div>
+
+      <p>© <span id="current-year">2026</span> China Seen.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
