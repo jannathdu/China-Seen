@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Explore 34 regions of China on an interactive travel map.">
+
+  <title>Explore China | China Seen</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- D3: Free and open-source visualization library -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+
+  <!-- Project scripts -->
+ 
+<!-- Regional information -->
+<script src="js/data.js" defer></script>
+
+<!-- Destination, history, culture and food data -->
+<script src="js/destinations.js" defer></script>
+
+<!-- Application functionality -->
+<script src="js/app.js" defer></script>
+
+<!-- Interactive China map -->
+<script src="js/map.js" defer></script>
+
+  <script src="js/explore-i18n.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar container"
+         aria-label="Main navigation">
+
+      <a href="index.html" class="brand">
+        <span class="brand-icon">中</span>
+        <span>
+          China Seen
+          <small>看见中国</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="nav-menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html" data-i18n="home">Home</a>
+        <a href="explore.html" class="active"
+           data-i18n="explore">Explore</a>
+        <a href="discover.html"
+           data-i18n="discover">Discover</a>
+        <a href="journey.html"
+           data-i18n="journey">My Journey</a>
+        <a href="progress.html"
+           data-i18n="progress">Progress</a>
+      </div>
+
+      <div class="language-switcher">
+        <label for="language-select" class="sr-only">
+          Select language
+        </label>
+
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="bn">বাংলা</option>
+        </select>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Explore heading -->
+    <section class="explore-intro">
+      <div class="container">
+
+        <span class="eyebrow">YOUR INTERACTIVE TRAVEL MAP</span>
+
+        <h1>Explore China</h1>
+
+        <p>
+          Discover China's regions, find your next destination,
+          and keep track of the places you have explored.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Main map layout -->
+    <section class="explore-section">
+      <div class="container">
+
+        <!-- Progress statistics -->
+        <div class="explore-stats">
+
+          <div class="explore-stat-card">
+            <span>Regions Explored</span>
+            <strong id="map-visited-count">0 / 34</strong>
+          </div>
+
+          <div class="explore-stat-card">
+            <span>Travel Progress</span>
+            <strong id="map-progress-percent">0%</strong>
+          </div>
+
+          <div class="explore-stat-card">
+            <span>Wishlist</span>
+            <strong id="map-wishlist-count">0</strong>
+          </div>
+
+        </div>
+
+        <div class="explore-layout">
+
+          <!-- Map column -->
+          <div class="map-panel">
+
+            <div class="map-toolbar">
+
+              <div>
+                <h2>China Travel Map</h2>
+                <p>Click a region to explore</p>
+              </div>
+
+              <div class="map-legend">
+                <span>
+                  <i class="legend-dot not-visited"></i>
+                  Not visited
+                </span>
+
+                <span>
+                  <i class="legend-dot wishlist"></i>
+                  Want to visit
+                </span>
+
+                <span>
+                  <i class="legend-dot visited"></i>
+                  Visited
+                </span>
+              </div>
+
+            </div>
+
+            <div class="map-search">
+              <label for="region-search" class="sr-only">
+                Search regions
+              </label>
+
+              <input
+                id="region-search"
+                type="search"
+                placeholder="Search Beijing, Sichuan, Yunnan..."
+                autocomplete="off">
+            </div>
+
+            <div id="china-map"
+                 class="china-map-container"
+                 aria-label="Interactive map of China">
+
+              <p id="map-loading">
+                Loading China map...
+              </p>
+
+            </div>
+
+            <div class="map-footer">
+              <span>34 regions to explore</span>
+              <span>China Seen · 看见中国</span>
+            </div>
+
+          </div>
+
+          <!-- Region information column -->
+          <aside class="region-panel"
+                 id="region-panel"
+                 aria-live="polite">
+
+            <div id="region-empty-state"
+                 class="region-empty-state">
+
+              <div class="region-empty-icon">🧭</div>
+
+              <h2>Your next discovery awaits.</h2>
+
+              <p>
+                Select a region on the map to explore
+                its destinations, culture and travel highlights.
+              </p>
+
+            </div>
+
+            <div id="region-details"
+                 class="region-details"
+                 hidden>
+
+              <span class="eyebrow">EXPLORE REGION</span>
+
+              <h2 id="region-name">Beijing</h2>
+
+              <p id="region-chinese-name"
+                 class="region-chinese-name">北京</p>
+
+              <span id="region-type"
+                    class="region-type-badge">Municipality</span>
+
+              <p id="region-description"
+                 class="region-description"></p>
+
+              <div class="region-highlights">
+                <h3>Travel Highlights</h3>
+
+                <div id="region-highlights-list">
+                </div>
+
+<!-- Selected destination details -->
+<div
+  id="destination-detail"
+  class="destination-detail"
+  aria-live="polite"
+  hidden>
+</div>
+
+              </div>
+
+              <div class="region-actions">
+
+                <button
+                  id="mark-visited-btn"
+                  class="btn btn-primary"
+                  type="button">
+                  Mark as Visited
+                </button>
+
+                <button
+                  id="wishlist-btn"
+                  class="btn btn-secondary"
+                  type="button">
+                  Want to Visit
+                </button>
+
+              </div>
+
+              <a href="discover.html"
+                 id="explore-region-link"
+                 class="region-explore-link">
+                Discover Places →
+              </a>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <div>
+        <strong>China Seen · 看见中国</strong>
+        <p data-i18n="footerTagline">
+          How much of China have you seen?
+        </p>
+      </div>
+
+      <p>
+        © <span id="current-year">2026</span> China Seen.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>

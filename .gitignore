@@ -1,0 +1,33 @@
+﻿# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Project backups
+backup_*/
+*.backup
+*.bak
+*.before-*.html
+*.before-*.js
+*backup*.js
+explore.before-*.html
+
+# Temporary files
+*.log
+*.tmp
