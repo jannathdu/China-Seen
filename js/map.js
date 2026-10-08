@@ -681,9 +681,14 @@ const emptyState = document.getElementById(
 
     mapGroup.selectAll("path")
       .data(features)
-      .join("path")
-      .attr("class", "china-region")
-      .attr("d", pathGenerator)
+      
+.join("path")
+.attr("class", "china-region")
+.attr("d", pathGenerator)
+.attr("data-color-variant", (feature, index) => {
+  return index % 8;
+})
+
       .attr("data-region-id", feature => {
         const region = findRegionByCode(
           feature.properties.adcode

@@ -71,6 +71,36 @@ It covers 34 provincial-level administrative regions of China.
 
 ---
 
+## Project Screenshots
+
+### Homepage
+Explore China's culture, destinations, and travel experiences.
+
+![China Seen Homepage](assets/screenshots/homepage.png)
+
+### Interactive China Map
+Explore China's 34 provincial-level regions through an interactive map.
+
+![China Seen Interactive Map](assets/screenshots/explore-map.png)
+
+### Discover Destinations
+Browse destinations, discover local food, and search by category.
+
+![China Seen Discover Page](assets/screenshots/discover.png)
+
+### My Journey
+Track visited regions and organize your travel wishlist.
+
+![China Seen My Journey Dashboard](assets/screenshots/my-journey.png)
+
+### Travel Progress
+Visualize exploration statistics, regional progress, and travel milestones.
+
+![China Seen Travel Progress Dashboard](assets/screenshots/travel-progress.png)
+
+---
+
+
 ## Live Demo
 
 Visit the website:

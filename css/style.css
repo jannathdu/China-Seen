@@ -1135,17 +1135,21 @@ a:focus-visible {
   border-radius: 50%;
 }
 
+
+/* Map Legend - Bright Red Theme */
+
 .legend-dot.not-visited {
-  background: #e0e7df;
+  background: #ff2b2b;
 }
 
 .legend-dot.wishlist {
-  background: #f3c96c;
+  background: #ff5a36;
 }
 
 .legend-dot.visited {
-  background: #5ba987;
+  background: #d10000;
 }
+
 
 /* Search */
 
@@ -1202,9 +1206,9 @@ a:focus-visible {
 }
 
 /* Individual geographic regions */
-
+ 
 .china-region {
-  fill: #e0e7df;
+  fill: #ff2b2b;
   stroke: #ffffff;
   stroke-width: 1.5;
   stroke-linejoin: round;
@@ -1216,39 +1220,80 @@ a:focus-visible {
     stroke 0.2s ease;
 }
 
+/* Not Visited - Bright Red */
 .china-region[data-status="not-visited"] {
-  fill: #e0e7df;
+  fill: #ff2b2b;
 }
 
+/* Different Red Shades for Unvisited Regions */
+
+.china-region[data-status="not-visited"][data-color-variant="0"] {
+  fill: #ff2020;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="1"] {
+  fill: #ed1010;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="2"] {
+  fill: #ff4545;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="3"] {
+  fill: #d91c1c;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="4"] {
+  fill: #fa3030;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="5"] {
+  fill: #c91624;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="6"] {
+  fill: #ff6060;
+}
+
+.china-region[data-status="not-visited"][data-color-variant="7"] {
+  fill: #e52935;
+}
+
+/* Wishlist - Deep Orange Red */
 .china-region[data-status="wishlist"] {
-  fill: #f3c96c;
+  fill: #ff5a36;
 }
 
+/* Visited - Dark Strong Red */
 .china-region[data-status="visited"] {
-  fill: #5ba987;
+  fill: #d10000;
 }
 
+/* Hover */
 .china-region:hover,
 .china-region.is-hovered {
-  fill: #bd7767;
-  stroke: #914a3e;
+  fill: #b30000;
+  stroke: #7a0000;
   stroke-width: 2;
 }
 
+/* Selected Region */
 .china-region.is-selected {
-  stroke: #b43c35;
+  fill: #8b0000;
+  stroke: #ffffff;
   stroke-width: 3;
 }
 
+/* Keyboard Focus */
 .china-region:focus-visible {
-  stroke: #263e34;
+  stroke: #4d0000;
   stroke-width: 4;
 }
 
+/* Dimmed Regions During Search */
 .china-region.is-dimmed {
-  opacity: 0.2;
+  opacity: 0.35;
 }
-
 /* Tooltip */
 
 .map-tooltip {
