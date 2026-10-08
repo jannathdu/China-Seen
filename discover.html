@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover China, explore destinations, and track your travel journey with China Seen.">
+
+  <title>China Seen | 看见中国</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/discover.css">
+
+  <script src="js/app.js" defer></script>
+<script src="js/destinations.js" defer></script>
+<script src="js/discover-i18n.js" defer></script>
+<script src="js/discover.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a href="index.html" class="brand" aria-label="China Seen Home">
+        <span class="brand-icon">中</span>
+        <span>China Seen <small>看见中国</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+        aria-label="Toggle navigation"
+        aria-controls="nav-menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+      
+<a href="index.html" data-i18n="home">Home</a>
+<a href="explore.html" data-i18n="explore">Explore</a>
+<a href="discover.html" class="active" aria-current="page" data-i18n="discover">Discover</a>
+
+        <a href="journey.html" data-i18n="journey">My Journey</a>
+        <a href="progress.html" data-i18n="progress">Progress</a>
+      </div>
+
+      <div class="language-switcher">
+        <label for="language-select" class="sr-only">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="bn">বাংলা</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  
+<main id="main-content">
+
+  <section class="discover-hero">
+    <div class="container">
+      <span class="eyebrow" data-discover-i18n="eyebrow">
+        EXPLORE BEYOND THE ORDINARY
+      </span>
+
+      <h1 data-discover-i18n="title">Discover China</h1>
+
+      <p data-discover-i18n="subtitle">
+        Find extraordinary destinations, cultural landmarks,
+        natural wonders, and unforgettable experiences across China.
+      </p>
+    </div>
+  </section>
+
+  <section class="discover-section">
+    <div class="container">
+
+      <div class="discover-toolbar">
+        <label for="destination-search" class="sr-only">
+          Search destinations
+        </label>
+
+        <input
+          id="destination-search"
+          type="search"
+          placeholder="Search destinations..."
+          autocomplete="off"
+        />
+
+        <div class="discover-filters" role="group" aria-label="Destination categories">
+          <button type="button" class="filter-btn active" data-category="all">All</button>
+          <button type="button" class="filter-btn" data-category="nature">Nature</button>
+          <button type="button" class="filter-btn" data-category="history">History</button>
+          <button type="button" class="filter-btn" data-category="culture">Culture</button>
+          <button type="button" class="filter-btn" data-category="food">Food</button>
+        </div>
+      </div>
+
+      <p id="discover-results-count" aria-live="polite"></p>
+
+      <div id="discover-grid" class="discover-grid">
+        <!-- Destination cards will be rendered here -->
+      </div>
+
+      <p id="discover-empty" class="discover-empty" hidden>
+        No destinations found.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>China Seen · 看见中国</strong>
+        <p data-i18n="footerTagline">How much of China have you seen?</p>
+      </div>
+
+      <p>© <span id="current-year">2026</span> China Seen.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
