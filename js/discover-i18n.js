@@ -15,7 +15,10 @@
       food: "Food",
       results: count => `${count} destinations found`,
       empty: "No destinations found.",
-      categories: "Destination categories"
+      
+categories: "Destination categories",
+imageDisclosure: "Destination images are AI-generated illustrations for visual inspiration and may not represent exact real-world appearances."
+
     },
 
     zh: {
@@ -30,7 +33,10 @@
       food: "美食",
       results: count => `找到${count}个目的地`,
       empty: "未找到符合条件的目的地。",
-      categories: "目的地类别"
+      
+categories: "目的地类别",
+imageDisclosure: "目的地图片为人工智能生成的示意图，仅供视觉参考，可能与真实景观不完全一致。"
+
     },
 
     bn: {
@@ -45,7 +51,10 @@
       food: "খাবার",
       results: count => `${new Intl.NumberFormat("bn-BD").format(count)}টি দর্শনীয় স্থান পাওয়া গেছে`,
       empty: "কোনো দর্শনীয় স্থান পাওয়া যায়নি।",
-      categories: "দর্শনীয় স্থানের বিভাগ"
+      
+categories: "দর্শনীয় স্থানের বিভাগ",
+imageDisclosure: "গন্তব্যের ছবিগুলো AI দিয়ে তৈরি প্রতীকী চিত্র, যা শুধু ভ্রমণের ধারণা দেওয়ার জন্য ব্যবহার করা হয়েছে। এগুলো বাস্তব স্থানের সঙ্গে সম্পূর্ণ মিলে নাও যেতে পারে।"
+
     }
   };
 

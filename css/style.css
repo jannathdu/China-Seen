@@ -550,32 +550,49 @@ a:focus-visible {
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.17);
 }
 
+
+/* Homepage Destination Images */
+
 .destination-beijing {
-  background: linear-gradient(
-    150deg,
-    #e2d4bd,
-    #b68f72 50%,
-    #795b54
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.05) 65%
+    ),
+    url("../assets/images/destinations/forbidden-city.webp")
+      center center / cover no-repeat;
 }
 
 .destination-sichuan {
-  background: linear-gradient(
-    150deg,
-    #d8e5cf,
-    #8cae90 55%,
-    #476e59
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.05) 65%
+    ),
+    url("../assets/images/destinations/jiuzhaigou.webp")
+      center center / cover no-repeat;
 }
 
 .destination-yunnan {
-  background: linear-gradient(
-    150deg,
-    #d7e5dc,
-    #91b7ad 50%,
-    #466e79
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.05) 65%
+    ),
+    url("../assets/images/destinations/lijiang-old-town.webp")
+      center center / cover no-repeat;
 }
+
+/* Improve Chinese Title Readability */
+
+.destination-image span {
+  color: #fff;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.65);
+}
+
 
 .destination-info {
   padding: 26px;

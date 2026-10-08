@@ -31,3 +31,6 @@ explore.before-*.html
 # Temporary files
 *.log
 *.tmp
+
+# Python virtual environment
+.venv/

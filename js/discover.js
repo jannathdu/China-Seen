@@ -96,11 +96,9 @@ const image = document.createElement("img");
 
 
 
-const pngImages = ["forbidden-city", "temple-of-heaven"];
-const extension = pngImages.includes(place.id) ? "png" : "jpg";
 
+image.src = `assets/images/destinations/${place.id}.webp`;
 
-image.src = `assets/images/destinations/${place.id}.png`;
 
 
 image.alt = localize(place.name);
