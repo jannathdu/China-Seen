@@ -1,0 +1,237 @@
+
+/* ==========================================
+   CHINA SEEN | MY JOURNEY
+   Phase 5 - Responsive Dashboard
+========================================== */
+
+.journey-hero {
+  padding: 85px 0 65px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff8f1, #f5e8dc);
+}
+
+.journey-hero .eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #a63e32;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.journey-hero h1 {
+  margin: 0 0 20px;
+  color: #252525;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.15;
+}
+
+.journey-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.journey-section {
+  padding: 65px 0 100px;
+}
+
+.journey-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.journey-stat-card {
+  padding: 30px;
+  border: 1px solid #eee7e0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+}
+
+.journey-stat-card span {
+  display: block;
+  margin-bottom: 14px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.journey-stat-card strong {
+  display: block;
+  color: #a63e32;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.journey-progress {
+  margin-bottom: 55px;
+  padding: 28px 30px;
+  border: 1px solid #eee7e0;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.journey-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.journey-progress-header h2 {
+  margin: 0;
+  color: #252525;
+  font-size: 22px;
+}
+
+#journey-progress-percent {
+  color: #a63e32;
+  font-size: 22px;
+}
+
+.journey-progress-track {
+  overflow: hidden;
+  height: 12px;
+  border-radius: 100px;
+  background: #f0e9e2;
+}
+
+.journey-progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #a63e32, #d88758);
+  transition: width 0.35s ease;
+}
+
+.journey-list-section {
+  margin-top: 50px;
+}
+
+.journey-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.journey-section-heading h2 {
+  margin: 0;
+  color: #252525;
+  font-size: 26px;
+}
+
+.journey-region-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.journey-region-card {
+  padding: 22px;
+  border: 1px solid #eee7e0;
+  border-radius: 14px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.journey-region-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.journey-region-card h3 {
+  margin: 0 0 8px;
+  color: #252525;
+  font-size: 19px;
+}
+
+.journey-region-card p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.journey-region-card a {
+  display: inline-block;
+  margin-top: 14px;
+  color: #a63e32;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.journey-region-card a:hover {
+  text-decoration: underline;
+}
+
+.journey-empty {
+  padding: 35px 25px;
+  border: 1px dashed #dccfc3;
+  border-radius: 14px;
+  background: #fffaf6;
+  color: #777;
+  text-align: center;
+}
+
+.journey-empty[hidden] {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .journey-region-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .journey-hero {
+    padding: 60px 0 45px;
+  }
+
+  .journey-hero p {
+    font-size: 15px;
+  }
+
+  .journey-section {
+    padding: 40px 0 70px;
+  }
+
+  .journey-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .journey-stat-card {
+    padding: 22px;
+  }
+
+  .journey-stat-card strong {
+    font-size: 34px;
+  }
+
+  .journey-progress {
+    padding: 22px;
+  }
+
+  .journey-progress-header h2 {
+    font-size: 19px;
+  }
+
+  .journey-region-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-section-heading h2 {
+    font-size: 22px;
+  }
+}

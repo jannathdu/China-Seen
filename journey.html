@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover China, explore destinations, and track your travel journey with China Seen.">
+
+  <title>China Seen | 看见中国</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/journey.css">
+
+  
+<script src="js/app.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/journey-i18n.js" defer></script>
+<script src="js/journey.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a href="index.html" class="brand" aria-label="China Seen Home">
+        <span class="brand-icon">中</span>
+        <span>China Seen <small>看见中国</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+        aria-label="Toggle navigation"
+        aria-controls="nav-menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        
+<a href="index.html" data-i18n="home">Home</a>
+
+        <a href="explore.html" data-i18n="explore">Explore</a>
+        <a href="discover.html" data-i18n="discover">Discover</a>
+        
+<a href="journey.html" class="active" aria-current="page" data-i18n="journey">My Journey</a>
+
+        <a href="progress.html" data-i18n="progress">Progress</a>
+      </div>
+
+      <div class="language-switcher">
+        <label for="language-select" class="sr-only">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="bn">বাংলা</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  
+<main id="main-content">
+
+  <!-- Journey Hero -->
+  <section class="journey-hero">
+    <div class="container">
+      <span class="eyebrow" data-journey-i18n="eyebrow">
+        YOUR CHINA TRAVEL STORY
+      </span>
+
+      <h1 data-journey-i18n="title">My Journey</h1>
+
+      <p data-journey-i18n="subtitle">
+        Track the places you have explored and plan where to go next.
+      </p>
+    </div>
+  </section>
+
+  <!-- Journey Dashboard -->
+  <section class="journey-section">
+    <div class="container">
+
+      <div class="journey-stats">
+        <article class="journey-stat-card">
+          <span data-journey-i18n="visited">Visited Regions</span>
+          <strong id="journey-visited-count">0</strong>
+        </article>
+
+        <article class="journey-stat-card">
+          <span data-journey-i18n="wishlist">Wishlist</span>
+          <strong id="journey-wishlist-count">0</strong>
+        </article>
+
+        <article class="journey-stat-card">
+          <span data-journey-i18n="total">Total Regions</span>
+          <strong>34</strong>
+        </article>
+      </div>
+
+      <!-- Travel Progress -->
+      <section class="journey-progress" aria-labelledby="journey-progress-heading">
+        <div class="journey-progress-header">
+          <h2 id="journey-progress-heading" data-journey-i18n="progress">
+            Travel Progress
+          </h2>
+
+          <strong id="journey-progress-percent">0%</strong>
+        </div>
+
+        <div
+          class="journey-progress-track"
+          id="journey-progress-track"
+          role="progressbar"
+          aria-label="Travel progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div id="journey-progress-fill" class="journey-progress-fill"></div>
+        </div>
+      </section>
+
+      <!-- Visited Regions -->
+      <section class="journey-list-section" aria-labelledby="journey-visited-heading">
+        <div class="journey-section-heading">
+          <h2 id="journey-visited-heading" data-journey-i18n="visitedTitle">
+            Visited Regions
+          </h2>
+
+          <a href="explore.html" class="text-link" data-journey-i18n="exploreMore">
+            Explore More →
+          </a>
+        </div>
+
+        <div id="journey-visited-list" class="journey-region-grid"></div>
+
+        <p id="journey-visited-empty" class="journey-empty" hidden>
+          You have not marked any regions as visited yet.
+        </p>
+      </section>
+
+      <!-- Wishlist -->
+      <section class="journey-list-section" aria-labelledby="journey-wishlist-heading">
+        <div class="journey-section-heading">
+          <h2 id="journey-wishlist-heading" data-journey-i18n="wishlistTitle">
+            My Wishlist
+          </h2>
+
+          <a href="explore.html" class="text-link" data-journey-i18n="addPlaces">
+            Add Places →
+          </a>
+        </div>
+
+        <div id="journey-wishlist-list" class="journey-region-grid"></div>
+
+        <p id="journey-wishlist-empty" class="journey-empty" hidden>
+          Your wishlist is empty. Start exploring China!
+        </p>
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>China Seen · 看见中国</strong>
+        <p data-i18n="footerTagline">How much of China have you seen?</p>
+      </div>
+
+      <p>© <span id="current-year">2026</span> China Seen.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
